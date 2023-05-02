@@ -50,16 +50,15 @@ const App = () => {
           newWord = eachWord.replace("qu","") + "quay"
           return newWord
       }else if(eachWord.match(/[aeiou]/i) != true && eachWord.includes("y")){
-          // return newWord.replace(0,"y") + "ay"
-          const y = eachWord.indexOf("y")
+          const y = eachWord.search("y")
           newWord = eachWord.slice(y) + eachWord.slice(0,y) + "ay"
           return newWord
-          
+      } else{
+        const x = eachWord.search(/[aeiou]/i)
+        newWord = eachWord.slice(x) + eachWord.slice(0,x) + "ay"
       }
 
 
-        
-        
         
       
 
@@ -121,7 +120,7 @@ const App = () => {
         </div>
         <p>{inputTranslated}</p>
       </div>
-      <footer>&copy; 2022 | Coded by: Your Names Here!</footer>
+      <footer>&copy; 2022 | Coded by: Suri & Tucker!</footer>
     </div>
   )
 }
