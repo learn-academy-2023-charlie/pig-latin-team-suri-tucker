@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './App.css'
 import butcherPigImage from './assets/butcherPig.jpeg'
 
+
+
 const App = () => {
 
   // ACTION ITEM: to make the development process easier there are some preassigned words in the input field, when you are ready for your full user experience delete the test words passed to useState and pass an empty string
@@ -34,9 +36,12 @@ const App = () => {
       // ACTION ITEM: your Pig Latin logic goes here!
       // input: string
       // output: new string that adds "way" to the end 
-      //Process: create a variable called newWord
+      // Process: create a variable called newWord
       // Create an If statement that takes the variable EachWord and then locates the value at its zero index and checks if it is a vowel.
-      // Logic: If character at zero index is a vowel, it will return the original word with "way" added at the end.
+      // If: If character at zero index is a vowel, it will return the original word with "way" added at the end.
+      // Else If: If the string starts with "qu" then it will remove the value using .replace and add "quay" to the end.
+      // Else If2: This checks if string has no vowels using the .match() and the .includes("y") for our conditional statement. Using the .seach to find the first instace and index of y, then using the .slice() to cut there and add "ay"  to the end.
+      // Else: Using .search() we tell the computer to find the first instance of a vowel, and using .slice() to cut it there and and add "ay" to the end.
     
       let newWord = ""
       
