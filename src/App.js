@@ -44,7 +44,19 @@ const App = () => {
       if(eachWord.charAt(0).match(/[aeiou]/i)) {
         newWord = eachWord + "way"
         return newWord
+
+      }else if(eachWord.startsWith("qu")) {
+          newWord = eachWord.replace("qu","") + "quay"
+          return newWord
+        }
+
+        
+        
+        
+      
+
       }else {}
+
  
     
 
