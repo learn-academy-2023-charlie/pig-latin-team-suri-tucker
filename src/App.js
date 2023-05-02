@@ -42,13 +42,21 @@ const App = () => {
       
 
       if(eachWord.charAt(0).match(/[aeiou]/i)) {
-        newWord = eachWord + "way"
-        return newWord
+
+          newWord = eachWord + "way"
+          return newWord
 
       }else if(eachWord.startsWith("qu")) {
           newWord = eachWord.replace("qu","") + "quay"
           return newWord
-        }
+      }else if(eachWord.match(/[aeiou]/i) != true && eachWord.includes("y")){
+          // return newWord.replace(0,"y") + "ay"
+          const y = eachWord.indexOf("y")
+          newWord = eachWord.slice(y) + eachWord.slice(0,y) + "ay"
+          return newWord
+          
+      }
+
 
         
         
